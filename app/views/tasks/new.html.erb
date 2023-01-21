@@ -1,0 +1,14 @@
+<h3>Use this form to add a new task to the list:</h3>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.label :completed? %>
+  <%= f.check_box :completed %>
+  <%= f.submit %>
+<% end %>
+
+<%= link_to "update task" update_task_path %>
+<%= link_to "back to task list" tasks_path %>
